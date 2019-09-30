@@ -1,0 +1,52 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.notification-box {
+  transition: transform 0.2s, opacity 0.2s;
+  transform: translateY(200px);
+  border: 1px solid rgba(194, 194, 194, 0.548);
+  border-radius: 5px;
+  position: fixed;
+  bottom: 15px;
+  opacity: 0;
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(15, 15, 15);
+  width: 270px;
+  max-height: 113px;
+  overflow: hidden;
+  z-index: 1000000;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &.show-box {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .wrap-box {
+    margin: 10px 20px;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 20px;
+    height: 20px;
+    line-height: 20px;
+    background-color: rgba(99, 162, 221, 0.904);
+    color: rgba(24, 62, 97, 0.904);
+  }
+
+  .message {
+    margin: 2px 0px;
+  }
+}
